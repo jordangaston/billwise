@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { colors, glass } from '../theme'
 
 export default function Pricing() {
   const [billAmount, setBillAmount] = useState(3500)
@@ -31,7 +32,7 @@ export default function Pricing() {
               alt="Ron G"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, oklch(20% 0.02 55 / 0.6) 0%, transparent 60%)' }} />
+            <div className="absolute inset-0" style={{ background: `linear-gradient(to top, ${colors.darkOverlay} 0%, transparent 60%)` }} />
             <div className="card bg-base-100/80 backdrop-blur border border-base-200 p-5 self-start relative">
               <div className="flex items-start gap-4">
                 <div className="avatar">

@@ -3,17 +3,20 @@
   themes: lofi;
 }
 
+/* -------------------------------------------------------
+   Design tokens — keep in sync with src/theme.js
+   ------------------------------------------------------- */
 [data-theme="lofi"] {
-  --color-primary: oklch(72% 0.17 48);
-  --color-primary-content: oklch(100% 0 0);
-  --color-base-100: oklch(98% 0.008 80);
-  --color-base-content: oklch(15% 0 0);
-  --color-base-200: oklch(95% 0.008 80);
-  --color-base-300: oklch(88% 0.008 80);
+  --color-primary:         oklch(72% 0.17 48);   /* colors.primary */
+  --color-primary-content: oklch(100% 0 0);       /* colors.primaryContent */
+  --color-base-100:        oklch(98% 0.008 80);   /* colors.base100 */
+  --color-base-200:        oklch(92% 0.008 80);   /* colors.base200 */
+  --color-base-300:        oklch(84% 0.008 80);   /* colors.base300 */
+  --color-base-content:    oklch(15% 0 0);        /* colors.baseContent */
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; /* fonts.sans */
 }
 
 .btn { border-radius: 9999px; }

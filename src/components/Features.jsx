@@ -1,4 +1,5 @@
 import GrainOverlay from './GrainOverlay'
+import { colors, glass } from '../theme'
 
 const features = [
   {
@@ -36,13 +37,7 @@ export default function Features() {
       <div className="max-w-6xl mx-auto px-8 lg:px-16 py-20">
         <div
           className="relative rounded-3xl p-8 lg:p-12 overflow-hidden"
-          style={{
-            background: 'rgba(210, 100, 30, 0.1)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
-            border: '1px solid rgba(210, 100, 30, 0.2)',
-            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 32px rgba(0,0,0,0.06)',
-          }}
+          style={glass.panel}
         >
           <GrainOverlay />
           <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-10">

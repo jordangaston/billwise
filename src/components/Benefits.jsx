@@ -1,4 +1,5 @@
 import { BRAND_AI } from '../constants'
+import { gradients } from '../theme'
 
 export default function Benefits() {
   return (
@@ -9,7 +10,7 @@ export default function Benefits() {
           <div
             className="p-10 lg:p-12 flex flex-col justify-between min-h-80"
             style={{
-              background: 'linear-gradient(135deg, oklch(91% 0.008 80) 0%, oklch(96% 0.008 80) 50%, oklch(93% 0.008 80) 100%)',
+              background: gradients.benefits,
             }}
           >
             <div>

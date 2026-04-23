@@ -1,12 +1,13 @@
 import { BRAND_NAME, BRAND_LEGAL } from '../constants'
 import GridOverlay from './GridOverlay'
 import GrainOverlay from './GrainOverlay'
+import { gradients } from '../theme'
 
 export default function Footer() {
   return (
     <footer
     className="relative overflow-hidden"
-    style={{ background: 'linear-gradient(to bottom, oklch(98% 0.008 80) 0%, oklch(96% 0.02 48) 25%, oklch(91% 0.05 48) 100%)' }}
+    style={{ background: gradients.footer }}
   >
     <GridOverlay direction="to top" />
     <GrainOverlay fadeDirection="to top" />
