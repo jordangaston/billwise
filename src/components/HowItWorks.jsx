@@ -184,16 +184,17 @@ export default function HowItWorks() {
                 <button
                   key={step.number}
                   onClick={() => { setActive(i); setScreenKey((k) => k + 1) }}
-                  className="w-full text-left card border transition-all duration-300 cursor-pointer"
+                  className="w-full text-left card border transition-all duration-300 cursor-pointer relative overflow-hidden"
                   style={isActive ? glass.active : glass.inactive}
                 >
+                  <GrainOverlay opacity={0.18} fadeDirection="to right" />
                   <div className="card-body p-6 gap-0">
                     <div className="flex items-start gap-5">
                       <span className={`text-sm font-semibold w-5 shrink-0 pt-0.5 transition-colors duration-300 ${isActive ? 'text-base-content/60' : 'text-base-content/25'}`}>
                         {step.number}
                       </span>
                       <div className="flex-1">
-                        <h3 className={`font-semibold transition-colors duration-300 ${isActive ? 'text-base-content' : 'text-base-content/40'}`}>
+                        <h3 className={`text-lg font-semibold transition-colors duration-300 ${isActive ? 'text-base-content' : 'text-base-content/40'}`}>
                           {step.title}
                         </h3>
                         <div

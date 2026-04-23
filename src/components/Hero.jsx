@@ -257,7 +257,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-base-content mb-4">
+            <h1 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-base-content mb-4">
               {BRAND_NAME} lowers your medical bills
             </h1>
             <p className="text-lg text-base-content/70 leading-relaxed mb-8 max-w-lg">
@@ -274,9 +274,10 @@ export default function Hero() {
           {/* Right: hero image */}
           <div className="relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[520px]">
             <img
-              src="/hero.jpeg"
+              src="/hero-4.jpeg"
               alt="Healthcare management made easy"
               className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: '70% 0%' }}
             />
             <div className="absolute bottom-8 right-6">
               <FlowCard />

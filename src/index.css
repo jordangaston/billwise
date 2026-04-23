@@ -16,7 +16,11 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; /* fonts.sans */
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; /* fonts.sans */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cabinet Grotesk', 'Plus Jakarta Sans', sans-serif; /* fonts.heading */
 }
 
 .btn { border-radius: 9999px; }

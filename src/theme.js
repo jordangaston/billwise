@@ -97,9 +97,8 @@ export const glass = {
 // Typography
 // ------------------------------------
 export const fonts = {
-  sans: "system-ui, -apple-system, 'Segoe UI', sans-serif",
-  // To swap to a Google Font, change this value and update the <link> in index.html
-  // e.g. "'Inter', sans-serif"
+  sans: "'Plus Jakarta Sans', system-ui, -apple-system, sans-serif",
+  heading: "'Cabinet Grotesk', 'Plus Jakarta Sans', sans-serif",
 }
 
 // ------------------------------------
