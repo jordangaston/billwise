@@ -79,7 +79,7 @@ function ErrorsCard() {
       <div className="card-body p-4 gap-2">
         <div className="flex items-center justify-between mb-0.5">
           <p className="text-xs font-semibold text-base-content">3 issues found</p>
-          <span className="badge badge-sm text-xs px-2 py-0.5" style={{ background: 'oklch(93% 0.03 285)', color: 'oklch(30% 0 0)' }}>Review needed</span>
+          <span className="badge badge-sm text-xs px-2 py-0.5" style={{ background: 'oklch(93% 0.03 48)', color: 'oklch(30% 0 0)' }}>Review needed</span>
         </div>
         {[
           { code: '99214', label: 'Up-coded office visit', amount: '$180' },
@@ -179,7 +179,7 @@ function SuccessCard() {
             <p className="text-xs text-base-content/40 mb-0.5">Was</p>
             <p className="text-sm font-mono font-semibold text-base-content/50 line-through">$3,500</p>
           </div>
-          <div className="flex-1 rounded-lg px-3 py-2 text-center" style={{ background: 'oklch(91% 0.03 285)' }}>
+          <div className="flex-1 rounded-lg px-3 py-2 text-center" style={{ background: 'oklch(91% 0.03 48)' }}>
             <p className="text-xs text-base-content/40 mb-0.5">Now</p>
             <p className="text-sm font-mono font-bold text-base-content">$2,520</p>
           </div>
@@ -226,7 +226,7 @@ export default function Hero() {
   return (
     <section
       className="text-left relative overflow-hidden"
-      style={{ background: 'linear-gradient(to bottom, oklch(89% 0.06 285) 0%, oklch(94% 0.04 285) 60%, oklch(98% 0.008 80) 100%)' }}
+      style={{ background: 'linear-gradient(to bottom, oklch(89% 0.06 48) 0%, oklch(94% 0.04 48) 60%, oklch(98% 0.008 80) 100%)' }}
     >
       <GridOverlay />
       <GrainOverlay />
@@ -271,7 +271,7 @@ export default function Hero() {
           </div>
 
           {/* Right: hero image */}
-          <div className="relative rounded-2xl overflow-hidden min-h-[420px] lg:min-h-[520px]">
+          <div className="relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[520px]">
             <img
               src="/hero-5.jpeg"
               alt="Healthcare management made easy"

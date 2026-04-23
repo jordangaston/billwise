@@ -21,7 +21,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="rounded-2xl overflow-hidden border border-base-200 grid grid-cols-1 lg:grid-cols-2">
+        <div className="rounded-3xl overflow-hidden border border-base-200 grid grid-cols-1 lg:grid-cols-2">
           {/* Left: social proof on subtle gradient */}
           <div
             className="relative p-10 lg:p-12 flex flex-col justify-end min-h-72 overflow-hidden"
@@ -31,7 +31,7 @@ export default function Pricing() {
               alt="Ron G"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, oklch(20% 0.02 285 / 0.6) 0%, transparent 60%)' }} />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, oklch(20% 0.02 55 / 0.6) 0%, transparent 60%)' }} />
             <div className="card bg-base-100/80 backdrop-blur border border-base-200 p-5 self-start relative">
               <div className="flex items-start gap-4">
                 <div className="avatar">

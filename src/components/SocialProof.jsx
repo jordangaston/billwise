@@ -46,7 +46,7 @@ export default function SocialProof() {
   return (
     <section className="py-16 border-t border-base-200">
       <div className="max-w-6xl mx-auto px-8 lg:px-16">
-        <div className="card bg-base-100 border border-base-300 flex flex-row items-center gap-10 px-8 py-6 overflow-hidden">
+        <div className="card rounded-3xl bg-base-100 border border-base-300 flex flex-row items-center gap-10 px-8 py-6 overflow-hidden">
           <div className="shrink-0 flex flex-col gap-2.5" style={{ maxWidth: '30%' }}>
             <p className="text-2xl font-bold text-base-content leading-tight">
               We save customers an average of{' '}

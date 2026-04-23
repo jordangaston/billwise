@@ -4,12 +4,12 @@ export default function Benefits() {
   return (
     <section className="border-t border-base-200">
       <div className="max-w-6xl mx-auto px-8 lg:px-16 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-base-200">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-base-200">
           {/* Left panel — diagonal gradient */}
           <div
             className="p-10 lg:p-12 flex flex-col justify-between min-h-80"
             style={{
-              background: 'linear-gradient(135deg, oklch(91% 0 0) 0%, oklch(96% 0 0) 50%, oklch(93% 0 0) 100%)',
+              background: 'linear-gradient(135deg, oklch(91% 0.008 80) 0%, oklch(96% 0.008 80) 50%, oklch(93% 0.008 80) 100%)',
             }}
           >
             <div>

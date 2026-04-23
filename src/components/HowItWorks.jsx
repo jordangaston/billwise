@@ -119,7 +119,7 @@ function PhoneScreen3() {
     <>
       <div className="px-3 py-2 border-b border-base-200 flex items-center justify-between">
         <p className="text-[11px] font-semibold text-base-content">Case #1042</p>
-        <span className="text-[10px] font-medium px-1.5 py-0.5 rounded" style={{ background: 'oklch(91% 0.03 285)', color: 'oklch(30% 0 0)' }}>Resolved</span>
+        <span className="text-[10px] font-medium px-1.5 py-0.5 rounded" style={{ background: 'oklch(91% 0.03 48)', color: 'oklch(30% 0 0)' }}>Resolved</span>
       </div>
       <div className="flex-1 px-3 py-2.5 flex flex-col gap-2.5 overflow-hidden">
         <div className="flex gap-1.5">
@@ -127,7 +127,7 @@ function PhoneScreen3() {
             <p className="text-[9px] text-base-content/40 mb-0.5">Was</p>
             <p className="text-[10px] font-mono font-semibold text-base-content/40 line-through">$3,500</p>
           </div>
-          <div className="flex-1 rounded-lg p-2 text-center" style={{ background: 'oklch(91% 0.03 285)' }}>
+          <div className="flex-1 rounded-lg p-2 text-center" style={{ background: 'oklch(91% 0.03 48)' }}>
             <p className="text-[9px] text-base-content/40 mb-0.5">Now</p>
             <p className="text-[10px] font-mono font-bold text-base-content">$2,520</p>
           </div>
@@ -185,11 +185,17 @@ export default function HowItWorks() {
                   onClick={() => { setActive(i); setScreenKey((k) => k + 1) }}
                   className="w-full text-left card border transition-all duration-300 cursor-pointer"
                   style={isActive ? {
-                    background: 'oklch(95% 0.03 285)',
-                    borderColor: 'oklch(86% 0.04 285)',
+                    background: 'rgba(210, 100, 30, 0.12)',
+                    backdropFilter: 'blur(14px)',
+                    WebkitBackdropFilter: 'blur(14px)',
+                    borderColor: 'rgba(210, 100, 30, 0.25)',
+                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.5), 0 4px 20px rgba(0,0,0,0.06)',
                   } : {
-                    background: 'oklch(100% 0 0)',
-                    borderColor: 'oklch(88% 0.04 285)',
+                    background: 'rgba(210, 100, 30, 0.05)',
+                    backdropFilter: 'blur(8px)',
+                    WebkitBackdropFilter: 'blur(8px)',
+                    borderColor: 'rgba(210, 100, 30, 0.12)',
+                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.4)',
                   }}
                 >
                   <div className="card-body p-6 gap-0">
@@ -218,8 +224,8 @@ export default function HowItWorks() {
 
           {/* Partial phone — bleeds off the bottom */}
           <div
-            className="rounded-2xl overflow-hidden relative"
-            style={{ background: 'linear-gradient(170deg, oklch(89% 0.06 285) 0%, oklch(95% 0.03 285) 50%, oklch(99% 0.01 285) 100%)' }}
+            className="rounded-3xl overflow-hidden relative"
+            style={{ background: 'linear-gradient(170deg, oklch(89% 0.06 48) 0%, oklch(95% 0.03 48) 50%, oklch(98% 0.008 80) 100%)' }}
           >
             <GridOverlay />
             <GrainOverlay />

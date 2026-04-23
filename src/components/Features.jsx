@@ -1,3 +1,5 @@
+import GrainOverlay from './GrainOverlay'
+
 const features = [
   {
     icon: (
@@ -33,15 +35,20 @@ export default function Features() {
     <section className="border-t border-base-200">
       <div className="max-w-6xl mx-auto px-8 lg:px-16 py-20">
         <div
-          className="rounded-2xl p-8 lg:p-12 border border-base-200"
+          className="relative rounded-3xl p-8 lg:p-12 overflow-hidden"
           style={{
-            background: 'linear-gradient(160deg, oklch(97% 0.015 285) 0%, oklch(94% 0.025 285) 100%)',
+            background: 'rgba(210, 100, 30, 0.1)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            border: '1px solid rgba(210, 100, 30, 0.2)',
+            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 32px rgba(0,0,0,0.06)',
           }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <GrainOverlay />
+          <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-10">
             {features.map((feature) => (
               <div key={feature.title} className="flex flex-col gap-4">
-                <div className="w-10 h-10 rounded-lg bg-base-100 border border-base-300 flex items-center justify-center text-base-content/70">
+                <div className="w-10 h-10 rounded-lg bg-white/60 border border-white/60 backdrop-blur-sm flex items-center justify-center text-base-content/70">
                   {feature.icon}
                 </div>
                 <div>

@@ -5,8 +5,7 @@ export default function Navbar() {
     <header className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16 pointer-events-none">
       <nav className="max-w-6xl mx-auto pointer-events-auto">
         <div
-          className="flex items-center justify-between px-6 py-3 bg-base-100 border border-base-200 shadow-sm"
-          style={{ borderRadius: '1rem' }}
+          className="flex items-center justify-between px-6 py-3 bg-base-100 border border-base-200 shadow-sm rounded-full"
         >
           <a href="/" className="text-lg font-bold tracking-tight text-base-content">
             {BRAND_NAME}
@@ -15,7 +14,7 @@ export default function Navbar() {
             <a href="#" className="btn btn-ghost btn-sm font-medium">
               Log in
             </a>
-            <a href="#" className="btn btn-primary btn-sm" style={{ borderRadius: '0.625rem' }}>
+            <a href="#" className="btn btn-primary btn-sm">
               Get started
             </a>
           </div>
