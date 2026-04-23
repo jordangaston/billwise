@@ -80,7 +80,7 @@ function ErrorsCard() {
       <div className="card-body p-4 gap-2">
         <div className="flex items-center justify-between mb-0.5">
           <p className="text-xs font-semibold text-base-content">3 issues found</p>
-          <span className="badge badge-sm text-xs px-2 py-0.5" style={{ background: colors.badgeBg, color: colors.contentMuted }}>Review needed</span>
+          <span className="badge badge-sm text-xs px-2 py-0.5" style={{ background: colors.primary, color: colors.primaryContent }}>Review needed</span>
         </div>
         {[
           { code: '99214', label: 'Up-coded office visit', amount: '$180' },
