@@ -35,7 +35,7 @@ export default function Features() {
         <div
           className="rounded-2xl p-8 lg:p-12 border border-base-200"
           style={{
-            background: 'linear-gradient(160deg, oklch(97% 0 0) 0%, oklch(94% 0 0) 100%)',
+            background: 'linear-gradient(160deg, oklch(97% 0.015 285) 0%, oklch(94% 0.025 285) 100%)',
           }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

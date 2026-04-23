@@ -1,12 +1,19 @@
 import { BRAND_NAME, BRAND_LEGAL } from '../constants'
+import GridOverlay from './GridOverlay'
+import GrainOverlay from './GrainOverlay'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-base-200 bg-base-200">
-      <div className="max-w-6xl mx-auto px-8 lg:px-16 py-16">
+    <footer
+    className="relative overflow-hidden"
+    style={{ background: 'linear-gradient(to bottom, oklch(98% 0.008 80) 0%, oklch(96% 0.02 285) 25%, oklch(91% 0.05 285) 100%)' }}
+  >
+    <GridOverlay direction="to top" />
+    <GrainOverlay fadeDirection="to top" />
+      <div className="max-w-6xl mx-auto px-8 lg:px-16 py-16 relative">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2">
-            <p className="text-xl font-bold text-base-content mb-3">{BRAND_NAME}</p>
+            <p className="text-5xl lg:text-6xl font-bold text-base-content mb-4 tracking-tight">{BRAND_NAME}</p>
             <p className="text-sm text-base-content/60 leading-relaxed max-w-xs">
               Save money, time, and energy with a healthcare assistant powered by AI and real experts.
             </p>
@@ -34,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-base-300 mt-12 pt-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+        <div className="mt-12 pt-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
           <p className="text-xs text-base-content/40">© 2024 {BRAND_LEGAL}. All rights reserved.</p>
           <p className="text-xs text-base-content/40">HIPAA-compliant · Encrypted · Secure</p>
         </div>

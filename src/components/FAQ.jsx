@@ -39,7 +39,7 @@ export default function FAQ() {
           </div>
           <div className="space-y-2">
             {faqs.map((faq) => (
-              <div key={faq.question} className="collapse collapse-arrow border border-base-200 bg-base-100 rounded-xl">
+              <div key={faq.question} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-xl">
                 <input type="checkbox" />
                 <div className="collapse-title font-semibold text-base-content pr-10 py-5">
                   {faq.question}

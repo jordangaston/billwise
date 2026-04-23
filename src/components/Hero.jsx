@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BRAND_NAME } from '../constants'
+import GridOverlay from './GridOverlay'
+import GrainOverlay from './GrainOverlay'
 
 const STEPS = [
   { id: 'upload', duration: 2200 },
@@ -77,7 +79,7 @@ function ErrorsCard() {
       <div className="card-body p-4 gap-2">
         <div className="flex items-center justify-between mb-0.5">
           <p className="text-xs font-semibold text-base-content">3 issues found</p>
-          <span className="badge badge-sm text-xs px-2 py-0.5" style={{ background: 'oklch(93% 0 0)', color: 'oklch(30% 0 0)' }}>Review needed</span>
+          <span className="badge badge-sm text-xs px-2 py-0.5" style={{ background: 'oklch(93% 0.03 285)', color: 'oklch(30% 0 0)' }}>Review needed</span>
         </div>
         {[
           { code: '99214', label: 'Up-coded office visit', amount: '$180' },
@@ -177,7 +179,7 @@ function SuccessCard() {
             <p className="text-xs text-base-content/40 mb-0.5">Was</p>
             <p className="text-sm font-mono font-semibold text-base-content/50 line-through">$3,500</p>
           </div>
-          <div className="flex-1 rounded-lg px-3 py-2 text-center" style={{ background: 'oklch(91% 0 0)' }}>
+          <div className="flex-1 rounded-lg px-3 py-2 text-center" style={{ background: 'oklch(91% 0.03 285)' }}>
             <p className="text-xs text-base-content/40 mb-0.5">Now</p>
             <p className="text-sm font-mono font-bold text-base-content">$2,520</p>
           </div>
@@ -223,10 +225,12 @@ function FlowCard() {
 export default function Hero() {
   return (
     <section
-      className="text-left"
-      style={{ background: 'linear-gradient(160deg, oklch(93% 0 0) 0%, oklch(98% 0 0) 60%)' }}
+      className="text-left relative overflow-hidden"
+      style={{ background: 'linear-gradient(to bottom, oklch(89% 0.06 285) 0%, oklch(94% 0.04 285) 60%, oklch(98% 0.008 80) 100%)' }}
     >
-      <div className="max-w-6xl mx-auto px-8 lg:px-16 pt-28 pb-12">
+      <GridOverlay />
+      <GrainOverlay />
+      <div className="max-w-6xl mx-auto px-8 lg:px-16 pt-28 pb-12 relative">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-8 lg:gap-12 items-center">
           {/* Left: copy */}
           <div>
@@ -269,7 +273,7 @@ export default function Hero() {
           {/* Right: hero image */}
           <div className="relative rounded-2xl overflow-hidden min-h-[420px] lg:min-h-[520px]">
             <img
-              src="/hero-2.jpeg"
+              src="/hero-5.jpeg"
               alt="Healthcare management made easy"
               className="absolute inset-0 w-full h-full object-cover"
             />

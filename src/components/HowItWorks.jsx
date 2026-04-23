@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BRAND_AI } from '../constants'
+import GridOverlay from './GridOverlay'
+import GrainOverlay from './GrainOverlay'
 
 const STEP_DURATION = 3800
 
@@ -117,7 +119,7 @@ function PhoneScreen3() {
     <>
       <div className="px-3 py-2 border-b border-base-200 flex items-center justify-between">
         <p className="text-[11px] font-semibold text-base-content">Case #1042</p>
-        <span className="text-[10px] font-medium px-1.5 py-0.5 rounded" style={{ background: 'oklch(91% 0 0)', color: 'oklch(30% 0 0)' }}>Resolved</span>
+        <span className="text-[10px] font-medium px-1.5 py-0.5 rounded" style={{ background: 'oklch(91% 0.03 285)', color: 'oklch(30% 0 0)' }}>Resolved</span>
       </div>
       <div className="flex-1 px-3 py-2.5 flex flex-col gap-2.5 overflow-hidden">
         <div className="flex gap-1.5">
@@ -125,7 +127,7 @@ function PhoneScreen3() {
             <p className="text-[9px] text-base-content/40 mb-0.5">Was</p>
             <p className="text-[10px] font-mono font-semibold text-base-content/40 line-through">$3,500</p>
           </div>
-          <div className="flex-1 rounded-lg p-2 text-center" style={{ background: 'oklch(91% 0 0)' }}>
+          <div className="flex-1 rounded-lg p-2 text-center" style={{ background: 'oklch(91% 0.03 285)' }}>
             <p className="text-[9px] text-base-content/40 mb-0.5">Now</p>
             <p className="text-[10px] font-mono font-bold text-base-content">$2,520</p>
           </div>
@@ -183,11 +185,11 @@ export default function HowItWorks() {
                   onClick={() => { setActive(i); setScreenKey((k) => k + 1) }}
                   className="w-full text-left card border transition-all duration-300 cursor-pointer"
                   style={isActive ? {
-                    background: 'linear-gradient(135deg, oklch(95% 0 0) 0%, oklch(92% 0 0) 100%)',
-                    borderColor: 'oklch(86% 0 0)',
+                    background: 'oklch(95% 0.03 285)',
+                    borderColor: 'oklch(86% 0.04 285)',
                   } : {
                     background: 'oklch(100% 0 0)',
-                    borderColor: 'oklch(92% 0 0)',
+                    borderColor: 'oklch(88% 0.04 285)',
                   }}
                 >
                   <div className="card-body p-6 gap-0">
@@ -217,8 +219,10 @@ export default function HowItWorks() {
           {/* Partial phone — bleeds off the bottom */}
           <div
             className="rounded-2xl overflow-hidden relative"
-            style={{ background: 'linear-gradient(135deg, oklch(94% 0 0) 0%, oklch(91% 0 0) 50%, oklch(95% 0 0) 100%)' }}
+            style={{ background: 'linear-gradient(170deg, oklch(89% 0.06 285) 0%, oklch(95% 0.03 285) 50%, oklch(99% 0.01 285) 100%)' }}
           >
+            <GridOverlay />
+            <GrainOverlay />
             <div
               className="absolute left-1/2 -translate-x-1/2"
               style={{ top: '28px' }}

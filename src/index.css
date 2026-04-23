@@ -3,6 +3,20 @@
   themes: lofi;
 }
 
+[data-theme="lofi"] {
+  --color-primary: oklch(62% 0.14 285);
+  --color-primary-content: oklch(100% 0 0);
+  --color-base-100: oklch(98% 0.008 80);
+  --color-base-content: oklch(15% 0 0);
+  --color-base-200: oklch(95% 0.008 80);
+  --color-base-300: oklch(88% 0.008 80);
+}
+
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

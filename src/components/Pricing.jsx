@@ -24,15 +24,20 @@ export default function Pricing() {
         <div className="rounded-2xl overflow-hidden border border-base-200 grid grid-cols-1 lg:grid-cols-2">
           {/* Left: social proof on subtle gradient */}
           <div
-            className="p-10 lg:p-12 flex flex-col justify-end min-h-72"
-            style={{
-              background: 'linear-gradient(160deg, oklch(88% 0 0) 0%, oklch(92% 0 0) 60%, oklch(86% 0 0) 100%)',
-            }}
+            className="relative p-10 lg:p-12 flex flex-col justify-end min-h-72 overflow-hidden"
           >
-            <div className="card bg-base-100/80 backdrop-blur border border-base-200 p-5 self-start">
+            <img
+              src="/ron.jpeg"
+              alt="Ron G"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, oklch(20% 0.02 285 / 0.6) 0%, transparent 60%)' }} />
+            <div className="card bg-base-100/80 backdrop-blur border border-base-200 p-5 self-start relative">
               <div className="flex items-start gap-4">
-                <div className="avatar placeholder">
-                  <div className="bg-base-300 text-base-content rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold">RG</div>
+                <div className="avatar">
+                  <div className="rounded-full w-10 h-10 overflow-hidden">
+                    <img src="/ron.jpeg" alt="Ron G" className="w-full h-full object-cover" />
+                  </div>
                 </div>
                 <div>
                   <p className="text-xs text-base-content/50 mb-0.5">Ron G</p>
@@ -44,13 +49,8 @@ export default function Pricing() {
             </div>
           </div>
 
-          {/* Right: calculator on warm gradient */}
-          <div
-            className="p-8 lg:p-10 border-l border-base-200"
-            style={{
-              background: 'linear-gradient(160deg, oklch(95% 0 0) 0%, oklch(98% 0 0) 50%, oklch(93% 0 0) 100%)',
-            }}
-          >
+          {/* Right: calculator */}
+          <div className="p-8 lg:p-10 border-l border-base-200 bg-base-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full bg-base-100 border border-base-300 flex items-center justify-center">
                 <svg className="w-5 h-5 text-base-content/60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -76,19 +76,14 @@ export default function Pricing() {
                 </label>
               </div>
 
-              <div
-                className="rounded-xl p-4"
-                style={{
-                  background: 'linear-gradient(135deg, oklch(93% 0 0) 0%, oklch(96% 0 0) 100%)',
-                }}
-              >
+              <div className="rounded-xl p-4 bg-base-200">
                 <div className="flex justify-between text-xs text-base-content/50 mb-2">
                   <span>Target discount</span>
                   <span className="font-semibold text-base-content">{Math.round(discountRate * 100)}%</span>
                 </div>
                 <div className="flex gap-2">
                   {[20, 28, 40, 60].map((pct) => (
-                    <button key={pct} className={`btn btn-xs flex-1 ${pct === 28 ? 'btn-neutral' : 'btn-ghost'}`}>
+                    <button key={pct} className={`btn btn-xs flex-1 ${pct === 28 ? 'btn-primary' : 'btn-ghost'}`}>
                       {pct}%
                     </button>
                   ))}
@@ -113,10 +108,7 @@ export default function Pricing() {
                     <span className="font-semibold">${youPay.toLocaleString()}.00</span>
                   </dd>
                 </div>
-                <div
-                  className="flex justify-between font-bold text-base rounded-lg px-3 py-3"
-                  style={{ background: 'linear-gradient(135deg, oklch(91% 0 0) 0%, oklch(94% 0 0) 100%)' }}
-                >
+                <div className="flex justify-between font-bold text-base rounded-lg px-3 py-3 bg-base-200">
                   <dt>Your net savings</dt>
                   <dd>${netSavings.toLocaleString()}.00</dd>
                 </div>
