@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-8 lg:px-16 py-16 relative">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2">
-            <p className="text-5xl lg:text-6xl font-bold text-base-content mb-4 tracking-tight">{BRAND_NAME}</p>
+            <p className="text-5xl lg:text-6xl font-bold text-base-content mb-4 tracking-tight">🩺 {BRAND_NAME}</p>
             <p className="text-sm text-base-content/60 leading-relaxed max-w-xs">
               Save money, time, and energy with a healthcare assistant powered by AI and real experts.
             </p>

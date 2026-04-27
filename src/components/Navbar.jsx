@@ -10,7 +10,7 @@ export default function Navbar({ onFileChosen }) {
         >
           <GrainOverlay opacity={0.15} fadeDirection="to bottom" />
           <a href="/" className="text-lg font-bold tracking-tight text-base-content">
-            {BRAND_NAME}
+            🩺 {BRAND_NAME}
           </a>
           <div className="flex items-center gap-2">
 <label className="btn btn-primary btn-sm cursor-pointer">
