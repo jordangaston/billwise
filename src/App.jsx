@@ -10,6 +10,7 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import LoadingModal from './components/LoadingModal'
 import WaitlistPage from './components/WaitlistPage'
+import InsuranceProviders from './components/InsuranceProviders'
 
 export default function App() {
   const [showModal, setShowModal] = useState(false)
@@ -38,6 +39,7 @@ export default function App() {
       <main>
         <Hero onFileChosen={handleFileChosen} />
         <SocialProof />
+        <InsuranceProviders />
         <HowItWorks />
         <Features />
         <Pricing />
