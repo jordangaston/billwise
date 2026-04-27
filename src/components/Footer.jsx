@@ -19,8 +19,10 @@ export default function Footer() {
               Save money, time, and energy with a healthcare assistant powered by AI and real experts.
             </p>
             <div className="flex gap-3 mt-6">
-              <a href="#" className="btn btn-outline btn-sm">Get started</a>
-              <a href="#" className="btn btn-ghost btn-sm">Log in</a>
+              <label className="btn btn-outline btn-sm cursor-pointer">
+                Upload your bill
+                <input type="file" className="hidden" accept=".pdf,.jpg,.jpeg,.heic,.png" />
+              </label>
             </div>
           </div>
           <div>

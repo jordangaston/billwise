@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { BRAND_NAME } from '../constants'
 import GridOverlay from './GridOverlay'
 import GrainOverlay from './GrainOverlay'
@@ -223,7 +223,94 @@ function FlowCard() {
   )
 }
 
-export default function Hero() {
+function BillUploadZone({ onFileChosen }) {
+  const [dragging, setDragging] = useState(false)
+  const [file, setFile] = useState(null)
+  const inputRef = useRef(null)
+
+  function handleFiles(files) {
+    if (files && files[0]) {
+      setFile(files[0])
+      onFileChosen?.()
+    }
+  }
+
+  return (
+    <div
+      className="w-full flex flex-col items-center justify-center text-center px-10 py-16 rounded-3xl"
+      style={{
+        border: `2px dashed ${dragging ? colors.primary : colors.glassBorderActive}`,
+        background: dragging ? colors.glassActive : 'rgba(255,255,255,0.55)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        transition: 'background 0.2s, border-color 0.2s',
+        minHeight: '420px',
+      }}
+      onDragOver={(e) => { e.preventDefault(); setDragging(true) }}
+      onDragLeave={() => setDragging(false)}
+      onDrop={(e) => { e.preventDefault(); setDragging(false); handleFiles(e.dataTransfer.files) }}
+    >
+      <input
+        ref={inputRef}
+        type="file"
+        className="hidden"
+        accept=".pdf,.jpg,.jpeg,.heic,.png"
+        onChange={(e) => handleFiles(e.target.files)}
+      />
+
+      {file ? (
+        <>
+          <div
+            className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+            style={{ background: colors.tint300 }}
+          >
+            <svg className="w-8 h-8" style={{ color: colors.primary }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <p className="text-lg font-semibold text-base-content mb-1">{file.name}</p>
+          <p className="text-sm text-base-content/50 mb-6">{(file.size / 1024).toFixed(0)} KB · ready to analyze</p>
+          <button
+            className="btn btn-primary btn-md"
+            style={{ background: colors.primary, color: colors.primaryContent, border: 'none' }}
+          >
+            Analyze my bill →
+          </button>
+          <button
+            className="text-xs text-base-content/40 mt-4 hover:text-base-content/60 transition-colors"
+            onClick={() => { setFile(null); inputRef.current.value = '' }}
+          >
+            Choose a different file
+          </button>
+        </>
+      ) : (
+        <>
+          <div
+            className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 cursor-pointer"
+            style={{ background: colors.tint300 }}
+            onClick={() => inputRef.current.click()}
+          >
+            <svg className="w-8 h-8" style={{ color: colors.primary }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+            </svg>
+          </div>
+          <p className="text-lg font-semibold text-base-content mb-1">Upload a medical bill to start</p>
+          <p className="text-sm text-base-content/50 mb-6">Drag and drop, or click to browse</p>
+          <button
+            className="btn btn-primary btn-md"
+            style={{ background: colors.primary, color: colors.primaryContent, border: 'none' }}
+            onClick={() => inputRef.current.click()}
+          >
+            Upload your bill
+          </button>
+          <p className="text-xs text-base-content/40 mt-4">Supports PDF, JPG, HEIC, PNG</p>
+        </>
+      )}
+    </div>
+  )
+}
+
+export default function Hero({ onFileChosen }) {
   return (
     <section
       className="text-left relative overflow-hidden"
@@ -263,26 +350,10 @@ export default function Hero() {
             <p className="text-lg text-base-content/70 leading-relaxed mb-8 max-w-lg">
               Save money, time, and energy with a healthcare assistant powered by AI and real experts.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <a href="#" className="btn btn-primary btn-lg">
-                Get started — it's free
-              </a>
-              <span className="text-sm text-base-content/50">Available on iOS and Web</span>
-            </div>
           </div>
 
-          {/* Right: hero image */}
-          <div className="relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[520px]">
-            <img
-              src="/hero-4.jpeg"
-              alt="Healthcare management made easy"
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ objectPosition: '70% 0%' }}
-            />
-            <div className="absolute bottom-8 right-6">
-              <FlowCard />
-            </div>
-          </div>
+          {/* Right: bill upload */}
+          <BillUploadZone onFileChosen={onFileChosen} />
         </div>
       </div>
     </section>

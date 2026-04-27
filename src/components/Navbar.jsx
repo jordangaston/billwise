@@ -1,7 +1,7 @@
 import { BRAND_NAME } from '../constants'
 import GrainOverlay from './GrainOverlay'
 
-export default function Navbar() {
+export default function Navbar({ onFileChosen }) {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16 pointer-events-none">
       <nav className="max-w-6xl mx-auto pointer-events-auto">
@@ -13,12 +13,15 @@ export default function Navbar() {
             {BRAND_NAME}
           </a>
           <div className="flex items-center gap-2">
-            <a href="#" className="btn btn-ghost btn-sm font-medium">
-              Log in
-            </a>
-            <a href="#" className="btn btn-primary btn-sm">
-              Get started
-            </a>
+<label className="btn btn-primary btn-sm cursor-pointer">
+              Upload your bill
+              <input
+                type="file"
+                className="hidden"
+                accept=".pdf,.jpg,.jpeg,.heic,.png"
+                onChange={(e) => { if (e.target.files?.[0]) onFileChosen?.() }}
+              />
+            </label>
           </div>
         </div>
       </nav>

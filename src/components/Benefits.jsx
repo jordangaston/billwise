@@ -22,7 +22,10 @@ export default function Benefits() {
                 We uncover unused benefits, highlight them for you, and answer any coverage questions at lightning speed.
               </p>
             </div>
-            <a href="#" className="btn btn-primary self-start">Get started</a>
+            <label className="btn btn-primary self-start cursor-pointer">
+              Upload your bill
+              <input type="file" className="hidden" accept=".pdf,.jpg,.jpeg,.heic,.png" />
+            </label>
           </div>
 
           {/* Right panel — chat demo */}

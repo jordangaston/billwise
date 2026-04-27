@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './index.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -7,13 +8,35 @@ import Features from './components/Features'
 import Pricing from './components/Pricing'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
+import LoadingModal from './components/LoadingModal'
+import WaitlistPage from './components/WaitlistPage'
 
 export default function App() {
+  const [showModal, setShowModal] = useState(false)
+  const [view, setView] = useState('home')
+
+  function handleFileChosen() {
+    setShowModal(true)
+    setTimeout(() => {
+      setShowModal(false)
+      setView('waitlist')
+    }, 2000)
+  }
+
+  if (view === 'waitlist') {
+    return (
+      <div data-theme="lofi">
+        <WaitlistPage />
+      </div>
+    )
+  }
+
   return (
     <div data-theme="lofi" className="min-h-screen bg-base-100">
-      <Navbar />
+      <LoadingModal visible={showModal} />
+      <Navbar onFileChosen={handleFileChosen} />
       <main>
-        <Hero />
+        <Hero onFileChosen={handleFileChosen} />
         <SocialProof />
         <HowItWorks />
         <Features />
