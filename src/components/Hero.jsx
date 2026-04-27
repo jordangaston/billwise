@@ -243,6 +243,7 @@ function BillUploadZone({ onFileChosen }) {
         background: dragging ? colors.glassActive : 'rgba(255,255,255,0.55)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
+        boxShadow: '0 8px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06)',
         transition: 'background 0.2s, border-color 0.2s',
         minHeight: '420px',
       }}
