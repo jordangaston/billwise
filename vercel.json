@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/negotiate-hospital-bills", "destination": "/", "permanent": false },
+    { "source": "/what-is-an-itemized-bill", "destination": "/", "permanent": false },
+    { "source": "/fight-hospital-bills", "destination": "/", "permanent": false },
+    { "source": "/100-percent-off-unless-we-win", "destination": "/", "permanent": false },
+    { "source": "/lower-bills-saves-users-70", "destination": "/", "permanent": false },
+    { "source": "/how-it-works", "destination": "/", "permanent": false }
+  ]
+}
