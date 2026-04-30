@@ -16,17 +16,17 @@ export default function App() {
   const [view, setView] = useState('home')
 
   function handleFileChosen() {
-    if (typeof gtag === 'function') {
-      gtag('event', 'conversion', {
-        send_to: 'AW-18123787051/36fbCPbOv6UcEKuWjMJD',
-        value: 1.0,
-        currency: 'USD',
-      })
-    }
     setShowModal(true)
     setTimeout(() => {
       setShowModal(false)
       setView('waitlist')
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          send_to: 'AW-18123787051/36fbCPbOv6UcEKuWjMJD',
+          value: 1.0,
+          currency: 'USD',
+        })
+      }
     }, 2000)
   }
 
