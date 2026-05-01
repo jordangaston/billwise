@@ -323,8 +323,8 @@ export default function Hero({ onFileChosen }) {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-8 lg:gap-12 items-center">
           {/* Left: copy */}
           <div>
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-base-content mb-4">
-              {BRAND_NAME} lowers your medical bills
+            <h1 className="text-[2.1rem] lg:text-[2.5rem] font-bold leading-tight tracking-tight text-base-content mb-4">
+              We negotiate your medical bills. You pay less.
             </h1>
             <ul className="flex flex-col gap-3 mb-6">
               {[
