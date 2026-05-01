@@ -10,7 +10,7 @@ const steps = [
   {
     number: '1',
     title: 'Upload your medical bill',
-    description: 'Connect your insurance or upload a medical bill or EOB (explanation of benefits) to get started.',
+    description: 'Connect your insurance or upload a medical bill or EOB to get started.',
   },
   {
     number: '2',
@@ -20,7 +20,7 @@ const steps = [
   {
     number: '3',
     title: 'A health advocate takes action',
-    description: 'A real expert negotiates on your behalf with insurers and providers to reduce what you owe.',
+    description: 'A real expert negotiates with your insurer and provider to cut what you owe.',
   },
 ]
 
@@ -171,7 +171,7 @@ export default function HowItWorks() {
         <div className="text-center mb-12">
           <p className="text-xs font-semibold uppercase tracking-widest text-base-content/50 mb-3">How it works</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-base-content leading-tight max-w-xl mx-auto">
-            Upload your bill and we'll review it for errors and help reduce what you owe
+            Upload your bill. We'll reduce what you owe.
           </h2>
         </div>
 

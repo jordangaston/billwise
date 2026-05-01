@@ -3,7 +3,8 @@ import { colors, glass } from '../theme'
 
 export default function Pricing() {
   const [billAmount, setBillAmount] = useState(3500)
-  const discountRate = 0.28
+  const [discountPct, setDiscountPct] = useState(28)
+  const discountRate = discountPct / 100
   const savings = Math.round(billAmount * discountRate)
   const fee = Math.min(Math.round(savings * 0.1), 200)
   const netSavings = savings - fee
@@ -84,7 +85,7 @@ export default function Pricing() {
                 </div>
                 <div className="flex gap-2">
                   {[20, 28, 40, 60].map((pct) => (
-                    <button key={pct} className={`btn btn-xs flex-1 ${pct === 28 ? 'btn-primary' : 'btn-ghost'}`}>
+                    <button key={pct} onClick={() => setDiscountPct(pct)} className={`btn btn-xs flex-1 ${pct === discountPct ? 'btn-primary' : 'btn-ghost'}`}>
                       {pct}%
                     </button>
                   ))}

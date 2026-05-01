@@ -9,7 +9,7 @@ const features = [
       </svg>
     ),
     title: 'We detect and correct issues',
-    description: 'We use AI to uncover incorrect charges, duplicate line items, up-coding errors, and other issues instantly.',
+    description: 'Our AI uncovers incorrect charges, duplicate line items, and up-coding errors — instantly.',
   },
   {
     icon: (
@@ -18,7 +18,7 @@ const features = [
       </svg>
     ),
     title: 'We secure financial aid',
-    description: 'We find unadvertised financial assistance programs based on household income that can dramatically lower your bills.',
+    description: 'We find unadvertised assistance programs based on your income that dramatically lower your bills.',
   },
   {
     icon: (
@@ -27,7 +27,7 @@ const features = [
       </svg>
     ),
     title: 'We negotiate discounts',
-    description: "We secure lower balances whether you're paying early, paying in full, or self-paying without insurance.",
+    description: "We secure lower balances whether you pay early, in full, or without insurance.",
   },
 ]
 

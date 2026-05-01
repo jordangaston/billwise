@@ -19,7 +19,7 @@ export default function Benefits() {
                 Uncover insights that maximize your benefits
               </h2>
               <p className="text-base text-base-content/60 leading-relaxed mb-8">
-                We uncover unused benefits, highlight them for you, and answer any coverage questions at lightning speed.
+                We find unused benefits and answer your coverage questions in seconds.
               </p>
             </div>
             <label className="btn btn-primary self-start cursor-pointer">

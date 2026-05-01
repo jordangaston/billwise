@@ -3,27 +3,27 @@ import { BRAND_NAME } from '../constants'
 const faqs = [
   {
     question: `What does ${BRAND_NAME} do?`,
-    answer: "We're your partner in managing the messiest parts of healthcare. Our app helps you track bills, flag errors, understand your benefits, resolve billing issues, and more. Whether it's a denied claim or a surprise charge, we handle the back-and-forth with your insurer and provider so you don't have to.",
+    answer: "We're your partner in navigating healthcare billing. We track bills, flag errors, understand your benefits, and resolve billing issues. Whether it's a denied claim or a surprise charge, we handle it so you don't have to.",
   },
   {
     question: `How does ${BRAND_NAME} work?`,
-    answer: "You set up your profile, connect your insurance, and tell us the issue you're facing. Our team of expert healthcare advocates — with the help of AI-driven technology — step in and handle it for you from start to finish.",
+    answer: "Set up your profile, connect your insurance, and describe your issue. Our expert advocates — backed by AI — take it from there.",
   },
   {
     question: 'Do you support my insurance plan?',
-    answer: "Yes. We support all major health insurance providers in the United States. Just connect your plan through the app and we'll get started. If you don't see it on our list, you can request for us to add it.",
+    answer: "Yes. We support all major U.S. health insurance providers. Connect your plan through the app to get started. Don't see yours? Request it.",
   },
   {
     question: `What's the cost of using ${BRAND_NAME}?`,
-    answer: "Creating an account, connecting your insurance, and opening cases are completely free. If we help you save money, we'll ask for your consent to collect a small, pre-agreed fee based on the amount saved.",
+    answer: "Creating an account, connecting your insurance, and opening cases are free. If we save you money, we collect a small, pre-agreed fee based on the amount saved.",
   },
   {
     question: 'Can I add my partner, kids, or parents?',
-    answer: "Yes. You can support your whole family by adding them to your profile. They'll just need to sign a HIPAA form so we can help on their behalf.",
+    answer: "Yes. Add your whole family to your profile. Each member signs a HIPAA authorization so we can act on their behalf.",
   },
   {
     question: `Is my information safe with ${BRAND_NAME}?`,
-    answer: "Yes. We take your privacy seriously. You sign a HIPAA authorization so we can act on your behalf, and we follow strict data protection protocols. Your data is only used to help resolve your healthcare issues — never sold or shared.",
+    answer: "Yes. You sign a HIPAA authorization so we can act on your behalf. We follow strict data protection protocols. Your data helps resolve your healthcare issues — never sold, never shared.",
   },
 ]
 

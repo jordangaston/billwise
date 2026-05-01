@@ -51,10 +51,9 @@ export default function SocialProof() {
         <div className="card rounded-3xl bg-base-100 border border-base-300 flex flex-row items-center gap-10 px-8 py-6 overflow-hidden">
           <div className="shrink-0 flex flex-col gap-2.5" style={{ maxWidth: '30%' }}>
             <p className="text-2xl font-bold text-base-content leading-tight">
-              We save customers an average of{' '}
-              <span className="underline decoration-2 underline-offset-4">70%</span> on their medical bills
+              Don't take our word for it
             </p>
-            <p className="text-sm text-base-content/60">100% free to use. Pay only if we save you money.</p>
+            <p className="text-sm text-base-content/60">Hear it from people who've saved.</p>
           </div>
 
           <div className="overflow-x-hidden flex-1 min-w-0">

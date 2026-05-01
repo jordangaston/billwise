@@ -36,7 +36,7 @@ export default function WaitlistPage() {
         </h1>
 
         <p className="text-base-content/70 leading-relaxed mb-3">
-          {BRAND_NAME} isn't open to the public yet — but you'll be among the first to know when we launch.
+          We're not open yet — but you'll be first to know when we launch.
         </p>
 
         <div
@@ -47,7 +47,7 @@ export default function WaitlistPage() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span>
-            <strong className="text-base-content/80">Heads up:</strong> your bill was not uploaded or stored. No data left your device — we just aren't ready to process bills yet.
+            <strong className="text-base-content/80">Heads up:</strong> your bill was not uploaded or stored. Nothing left your device — we aren't ready to process bills yet.
           </span>
         </div>
 
