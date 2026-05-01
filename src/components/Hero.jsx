@@ -324,7 +324,7 @@ export default function Hero({ onFileChosen }) {
           {/* Left: copy */}
           <div>
             <h1 className="text-[2.1rem] lg:text-[2.5rem] font-bold leading-tight tracking-tight text-base-content mb-4">
-              We negotiate your medical bills. <span className="underline decoration-2 underline-offset-4" style={{ color: 'oklch(45% 0.18 285)' }}>You pay less.</span>
+              <span className="underline decoration-2 underline-offset-4" style={{ color: 'oklch(45% 0.18 285)' }}>Save 70%</span> on medical bills
             </h1>
             <ul className="flex flex-col gap-3 mb-6">
               {[
