@@ -329,7 +329,7 @@ export default function Hero({ onFileChosen }) {
             <ul className="flex flex-col gap-3 mb-6">
               {[
                 '70% savings for our average customer.',
-                '100% free unless we win.',
+                '100% free unless you save.',
                 'HIPAA-aligned. We guard your data like it\'s ours.',
               ].map((point) => (
                 <li key={point} className="flex items-center gap-3">
