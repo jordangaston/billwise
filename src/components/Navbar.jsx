@@ -1,5 +1,6 @@
 import { BRAND_NAME } from '../constants'
 import GrainOverlay from './GrainOverlay'
+import { track } from '../analytics'
 
 export default function Navbar({ onFileChosen }) {
   return (
@@ -13,7 +14,7 @@ export default function Navbar({ onFileChosen }) {
             🩺 {BRAND_NAME}
           </a>
           <div className="flex items-center gap-2">
-<label className="btn btn-primary btn-sm cursor-pointer">
+<label className="btn btn-primary btn-sm cursor-pointer" onClick={() => track('cta_clicked', { source: 'navbar' })}>
               Upload your bill
               <input
                 type="file"

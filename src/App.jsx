@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './index.css'
+import { track } from './analytics'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SocialProof from './components/SocialProof'
@@ -14,6 +15,10 @@ import WaitlistPage from './components/WaitlistPage'
 export default function App() {
   const [showModal, setShowModal] = useState(false)
   const [view, setView] = useState('home')
+
+  useEffect(() => {
+    track('landing_page_viewed')
+  }, [])
 
   function handleFileChosen() {
     setShowModal(true)

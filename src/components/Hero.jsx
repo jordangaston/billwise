@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { track } from '../analytics'
 import { BRAND_NAME } from '../constants'
 import GridOverlay from './GridOverlay'
 import GrainOverlay from './GrainOverlay'
@@ -346,6 +347,7 @@ export default function Hero({ onFileChosen }) {
             <label
               className="btn btn-primary btn-lg cursor-pointer"
               style={{ background: colors.primary, color: colors.primaryContent, border: 'none', boxShadow: `0 4px 16px rgba(100, 60, 180, 0.35), 0 1px 3px rgba(0,0,0,0.12)` }}
+              onClick={() => track('cta_clicked', { source: 'hero' })}
             >
               Upload your bill →
               <input

@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { track } from '../analytics'
 import { BRAND_NAME } from '../constants'
 import { colors, gradients } from '../theme'
 import GridOverlay from './GridOverlay'
@@ -7,6 +8,10 @@ import GrainOverlay from './GrainOverlay'
 export default function WaitlistPage() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+
+  useEffect(() => {
+    track('waitlist_page_viewed')
+  }, [])
 
   function handleSubmit(e) {
     e.preventDefault()
